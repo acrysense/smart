@@ -1,0 +1,168 @@
+.modal-overlay
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1000
+    background: rgba($primary-color, 0.6)
+    &--active
+        opacity: 1
+        visibility: visible
+
+.modal
+    display: none
+    opacity: 0
+    visibility: hidden
+    &--active
+        display: block
+        opacity: 1
+        visibility: visible
+    &__wrapper
+        padding: 105px 146px
+        max-width: 546px
+        width: 100%
+        color: $primary-color
+    &__wrapper--absolute
+        position: fixed
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 1001
+        background: $white-color
+        border-radius: 50%
+    &__title
+        max-width: 162px
+        font-size: 24px
+        font-weight: bold
+    &__description
+        margin: 10px 0 18px
+        max-width: 255px
+        font-size: 14px
+        font-weight: 500
+    &__group + &__group
+        margin-top: 8px
+    &__input
+        padding: 16px 16px 12px
+        width: 100%
+        color: $primary-color
+        background: #F6F6F6
+        border: none
+        border-radius: 8px
+        &::placeholder
+            color: $grey-color
+        &:focus
+            outline: none
+    &__btn
+        padding: 22px 20px
+        margin-top: 8px
+        width: 100%
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        color: $white-color
+        background: $blue-color
+        border: none
+        border-radius: 8px
+    &__close
+        position: fixed
+        top: calc(50% - 249px)
+        right: calc(50% - 249px)
+        transform: translate(-50%, -50%)
+        z-index: 1001
+        width: 24px
+        height: 24px
+        background: url(../img/dist/sprite.svg#icon-close)
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center
+        cursor: pointer
+
+@media (min-width: 1200px)
+    .modal
+        &__wrapper--concept
+            margin-top: 64px
+            margin-left: 70px
+
+@media (max-width: 991px)
+    .modal
+        &__wrapper--concept
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+
+@media (min-width: 768px) and (max-width: 1199px)
+    .modal
+        &__wrapper--concept
+            margin-top: 37px
+
+@media (min-width: 768px) and (max-width: 991px)
+    .modal
+        &__wrapper--concept
+            margin-top: 237px
+
+@media (min-width: 576px) and (max-width: 767px)
+    .modal
+        &__wrapper--concept
+            margin-top: 314px
+
+@media (min-width: 576px)
+    .modal
+        &__wrapper--concept
+            background: $white-color
+            border-radius: 50%
+
+@media (max-width: 575px)
+    .modal
+        &__wrapper:not(.modal__wrapper--concept)
+            padding: 24px 16px
+            max-width: 100%
+            width: 90%
+            border-radius: 8px
+        &__wrapper--concept
+            padding: 48px 16px 120px
+            margin-top: 204px
+            max-width: 100%
+            &::before
+                content: ''
+                display: inline-block
+                position: absolute
+                top: 0
+                left: 0
+                z-index: -1
+                max-width: 100%
+                height: 288px
+                width: 100%
+                background: $white-color
+                border-radius: 50% 50% 0 0
+            &::after
+                content: ''
+                display: inline-block
+                position: absolute
+                bottom: 0
+                left: 0
+                z-index: -1
+                max-width: 100%
+                height: 288px
+                width: 100%
+                background: $white-color
+                border-radius: 0 0 50% 50%
+        &__title--concept,
+        &__description--concept
+            max-width: 100%
+            text-align: center
+        &__btn--concept
+            padding: 14px 20px
+        &__close
+            top: calc(50% - 209px)
+            right: 20px
+    
+@media (min-width: 380px) and (max-width: 575px)
+    .modal
+        &__wrapper--concept
+            padding: 48px 48px 120px

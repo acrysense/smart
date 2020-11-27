@@ -1,0 +1,248 @@
+.footer
+    margin-top: 30px
+    &__main
+        padding-bottom: 40px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        padding: 32px 0
+        width: 100%
+    &__wrapper--inner
+        max-width: 276px
+    &__inner
+        width: 324px
+    &__contacts
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+    &__phone
+        font-size: 24px
+        font-weight: bold
+    &__back-call
+        font-weight: 500
+    &__logo
+        display: block
+        margin-right: 26px
+        max-width: 99px
+        min-width: 99px
+        width: 100%
+        img
+            width: 99px
+            height: 142px
+    &__item
+        &:first-child
+            margin-bottom: 16px
+    &__item + &__item
+        margin-top: 8px
+    &__link
+        font-size: 16px
+        font-weight: 500
+        color: $grey-color
+    &__link--title
+        font-weight: bold
+        text-transform: uppercase
+        color: $primary-color
+    &__copyright
+        border-top: 1px solid rgba($primary-color, 0.5)
+    &__linkable
+        font-weight: 500
+        color: $grey-color
+        border-bottom: 1px solid $grey-color
+    &__author
+        font-weight: 500
+        text-align: right
+        a
+            font-weight: bold
+            text-decoration: underline
+
+.social
+    &--tidings 
+        margin-top: 31px
+        padding-top: 24px
+        border-top: 1px solid #E1E3E5
+    &__title
+        font-size: 14px
+        font-weight: bold
+        text-transform: uppercase
+    &__list
+        display: flex
+        align-items: center
+        margin-top: 8px
+    &__item + &__item
+        margin-left: 8px
+    &__link
+        display: block
+        position: relative
+        width: 40px
+        height: 40px
+        border: 1px solid #E1E3E5
+        border-radius: 50%
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: 100%
+            transition: all 0.5s
+        &:hover
+            background: $blue-color
+            border: 1px solid transparent
+    &__link--instagram
+        &::before
+            width: 17px
+            height: 17px
+            background-image: url(../img/dist/sprite.svg#instagram)
+        &:hover
+            &::before
+                background-image: url(../img/dist/sprite.svg#instagram-white)
+    &__link--vk
+        &::before
+            width: 21px
+            height: 12px
+            background-image: url(../img/dist/sprite.svg#vk)
+        &:hover
+            &::before
+                background-image: url(../img/dist/sprite.svg#vk-white)
+    &__link--facebook
+        &::before
+            width: 17px
+            height: 17px
+            background-image: url(../img/dist/sprite.svg#facebook)
+        &:hover
+            &::before
+                background-image: url(../img/dist/sprite.svg#facebook-white)
+    &__link--ok
+        &::before
+            width: 14px
+            height: 22px
+            background-image: url(../img/dist/sprite.svg#ok)
+        &:hover
+            &::before
+                background-image: url(../img/dist/sprite.svg#ok-white)
+    &__link--youtube
+        &::before
+            width: 18px
+            height: 13px
+            background-image: url(../img/dist/sprite.svg#youtube)
+        &:hover
+            &::before
+                background-image: url(../img/dist/sprite.svg#youtube-white)
+
+@media (max-width: 1439px)
+    .footer
+        &__inner
+            width: 100%
+
+@media (min-width: 992px)
+    .footer
+        &__mobile
+            display: none
+        &__contacts
+            margin-bottom: 97px
+        &__inner--separate
+            display: none
+
+@media (max-width: 991px)
+    .footer
+        &__mobile
+            padding: 26px 0
+            margin: 0 16px
+            border-top: 1px solid rgba($primary-color, 0.2)
+            border-bottom: 1px solid rgba($primary-color, 0.2)
+        &__copyright
+            padding: 0
+            margin: 0 16px
+            border-top: 1px solid rgba($primary-color, 0.2)
+        &__inner--hidden
+            display: none
+        &__back-call
+            color: $blue-color
+            border-bottom: 1px solid $blue-color
+
+@media (min-width: 768px) and (max-width: 991px)
+    .footer
+        &__wrapper--inner,
+        &__wrapper--copyfirst
+            min-width: 300px
+        &__inner--copyright
+            &:first-child
+                display: none
+
+@media (min-width: 768px)
+    .footer
+        &__inner--logotype
+            display: none
+
+@media (min-width: 576px) and (max-width: 991px)
+    .footer
+        padding-bottom: 32px
+    .social
+        margin-left: auto
+
+@media (min-width: 576px) and (max-width: 767px)
+    .footer
+        &__wrapper--inner
+            margin-right: 32px
+            min-width: 230px
+        &__wrapper--inner
+            max-width: 100%
+            width: 100%
+        &__wrapper--copyfirst
+            padding: 16px 0 0
+            min-width: 320px
+        &__wrapper--copyright
+            justify-content: flex-start
+            flex-direction: column
+            padding: 0
+        &__inner--copyright
+            margin-top: 17px
+            width: 100%
+            margin-left: 20px
+            &:first-child,
+            &:last-child
+                display: none
+        &__inner--separate
+            margin-top: 17px
+            min-width: 320px
+            width: 320px
+        &__author
+            margin-top: 17px
+            margin-left: 20px
+            text-align: left
+    
+@media (max-width: 575px)
+    .footer
+        padding-bottom: 16px
+        &__mobile,
+        &__content,
+        &__copyright
+            flex-direction: column
+        &__wrapper--inner
+            max-width: 100%
+            width: 100%
+        &__wrapper--copyfirst
+            padding: 16px 0 0
+        &__wrapper--copyright
+            justify-content: flex-start
+            flex-direction: column
+            padding: 0
+        &__logo
+            width: 50%
+        &__inner
+            width: 50%
+        &__inner--copyright
+            margin-top: 17px
+            width: 100%
+        &__inner--separate,
+        &__inner--logotype
+            display: none
+        &__author
+            margin-top: 17px
+            text-align: center
+    .social
+        margin-top: 24px
+        &__list--footer
+            justify-content: space-between

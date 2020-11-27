@@ -1,0 +1,336 @@
+// INDEX
+.main
+    &__buttons
+        .swiper-button-prev,
+        .swiper-button-next
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            z-index: 100
+            width: 63px
+            height: 63px
+            background: transparent
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: center
+            border: none
+            cursor: pointer
+            transition: opacity 0.5s
+            &:focus
+                outline: none
+        .swiper-button-prev
+            left: 32px
+            opacity: 0.5
+            background-image: url(../img/dist/sprite.svg#arrow-left)
+            &:hover
+                opacity: 1
+        .swiper-button-next
+            right: 32px
+            opacity: 0.5
+            background-image: url(../img/dist/sprite.svg#arrow-right)
+            &:hover
+                opacity: 1
+    &__slide
+        position: relative
+        z-index: -1
+        height: 100vh
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+
+// PURCHASE
+.mortgage-slider
+    .swiper-bottom
+        display: flex
+        justify-content: space-between
+        position: absolute
+        bottom: 32px
+        z-index: 1
+        padding: 0 32px
+        width: 100%
+    .swiper-buttons
+        display: flex
+        align-items: center
+    .swiper-button-prev,
+    .swiper-button-next
+        position: relative
+        z-index: 10
+        width: 24px
+        height: 24px
+        background: $white-color
+        background-repeat: no-repeat
+        background-size: 16px
+        background-position: center
+        border: 1px solid #E1E3E5
+        border-radius: 8px
+        &:focus
+            outline: none
+    .swiper-button-prev
+        background-image: url(../img/dist/sprite.svg#arrow-left-black)
+    .swiper-button-next
+        margin-left: 6px
+        background-image: url(../img/dist/sprite.svg#arrow-right-black)
+    .swiper-pagination
+        display: flex
+        align-items: center
+        font-size: 14px
+        font-weight: 500
+        line-height: 150%
+    .swiper-pagination-bullet
+        display: block
+        width: 8px
+        height: 8px
+        background: rgba($white-color, 0.5)
+        border-radius: 50%
+    .swiper-pagination-bullet + .swiper-pagination-bullet
+        margin-left: 8px
+    .swiper-pagination-bullet-active
+        width: 16px
+        height: 16px
+        background: $white-color
+
+// FLAT
+.smart-flat
+    &__slider
+        width: 100%
+        height: 100%
+        .swiper-container
+            width: 100%
+            height: 100%
+        .swiper-slide
+            width: 100%
+    &__thumbs
+        position: absolute
+        right: 48px
+        bottom: 48px
+        .swiper-container
+            width: 500px
+            height: 394px
+            background: $white-color
+            border-radius: 8px
+        .swiper-buttons
+            display: flex
+            align-items: center
+            position: absolute
+            bottom: 32px
+            left: 48px
+            z-index: 1
+        .swiper-button-prev,
+        .swiper-button-next
+            position: relative
+            z-index: 10
+            width: 48px
+            height: 48px
+            background: $white-color
+            background-repeat: no-repeat
+            background-size: 16px
+            background-position: center
+            border: 1px solid #E1E3E5
+            border-radius: 8px
+            box-shadow: 0 3px 6px rgba(#000, 0.08)
+            &:focus
+                outline: none
+        .swiper-button-prev
+            background-image: url(../img/dist/sprite.svg#arrow-left-black)
+        .swiper-button-next
+            background-image: url(../img/dist/sprite.svg#arrow-right-black)
+        .swiper-button-disabled
+            box-shadow: none
+        .swiper-pagination
+            margin: 0 12px
+            font-size: 14px
+            font-weight: 500
+            line-height: 150%
+        .swiper-pagination-current
+            margin-right: -3px
+            font-size: 24px
+            line-height: 150%
+            &::before
+                content: '0'
+        .swiper-pagination-total
+            margin-left: -3px
+            &::before
+                content: '0'
+
+// INFRASTRUCTURE
+.infrastructure
+    &__slider
+        .swiper-container
+            height: 485px
+        .swiper-slide
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+        .swiper-bottom
+            display: flex
+            justify-content: space-between
+            position: absolute
+            bottom: 32px
+            left: 50%
+            transform: translateX(-50%)
+            z-index: 1
+            max-width: 688px
+            width: 100%
+        .swiper-buttons
+            display: flex
+            align-items: center
+        .swiper-button-prev,
+        .swiper-button-next
+            position: relative
+            z-index: 10
+            width: 24px
+            height: 24px
+            background: $white-color
+            background-repeat: no-repeat
+            background-size: 16px
+            background-position: center
+            border: 1px solid #E1E3E5
+            border-radius: 8px
+            &:focus
+                outline: none
+        .swiper-button-prev
+            background-image: url(../img/dist/sprite.svg#arrow-left-black)
+        .swiper-button-next
+            margin-left: 6px
+            background-image: url(../img/dist/sprite.svg#arrow-right-black)
+        .swiper-pagination
+            display: flex
+            align-items: center
+            font-size: 14px
+            font-weight: 500
+            line-height: 150%
+        .swiper-pagination-bullet
+            display: block
+            width: 8px
+            height: 8px
+            background: rgba($white-color, 0.5)
+            border-radius: 50%
+        .swiper-pagination-bullet + .swiper-pagination-bullet
+            margin-left: 8px
+        .swiper-pagination-bullet-active
+            width: 16px
+            height: 16px
+            background: $white-color
+
+// PROJECTS
+.projects
+    &__head
+        .swiper-container
+            height: 299px
+        .swiper-lazy
+            height: 100%
+        .swiper-bottom
+            display: flex
+            justify-content: space-between
+            position: absolute
+            bottom: 23px
+            z-index: 2
+            padding: 0 32px
+            width: 100%
+        .swiper-pagination
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            font-size: 14px
+            font-weight: 500
+            line-height: 150%
+        .swiper-pagination-bullet
+            display: block
+            width: 100%
+            height: 6px
+            background: rgba($white-color, 0.5)
+            border-radius: 40px
+        .swiper-pagination-bullet + .swiper-pagination-bullet
+            margin-left: 8px
+        .swiper-pagination-bullet-active
+            background: $white-color
+        .swiper-button-prev,
+        .swiper-button-next
+            position: absolute
+            top: 0
+            z-index: 1
+            width: 50%
+            height: 100%
+            background: transparent
+            border: none
+            &:focus
+                outline: none
+        .swiper-button-prev
+            left: 0
+        .swiper-button-next
+            right: 0
+
+// FLAT
+.flat
+    &__slider
+        max-height: 407px
+        overflow: hidden
+        .swiper-slide
+            max-height: 100%
+    &__nav
+        .swiper-pagination-current
+            font-size: 24px
+
+// MEDIA QUARIES
+@media (min-width: 992px) and (max-width: 1439px)
+    .infrastructure
+        &__slider
+            .swiper-container
+                max-width: 1032px
+                width: 100%
+            .swiper-slide
+                max-width: 1032px
+                width: 100%
+
+@media (min-width: 992px) and (max-width: 1199px)
+    .infrastructure
+        &__slider
+            .swiper-bottom
+                padding: 0 24px
+
+@media (max-width: 767px)
+    .smart-flat
+        left: 0
+        right: 0
+        &__thumbs
+            .swiper-container
+                width: auto
+                max-height: 394px
+                overflow: hidden
+
+@media (min-width: 576px) and (max-width: 767px)
+    .smart-flat
+        &__thumbs
+            width: 100%
+    .infrastructure
+        &__slider
+            .swiper-bottom
+                padding: 0 24px
+
+@media (max-width: 575px)
+    .main,
+    .mortgage-slider,
+    .flat
+        .swiper-button-prev,
+        .swiper-button-next
+            display: none
+    .mortgage-slider
+        .swiper-pagination
+            display: none
+    .smart-flat
+        &__thumbs
+            width: calc(100% - 32px)
+            .swiper-buttons
+                left: 16px
+                bottom: 16px
+    .infrastructure
+        &__slider
+            .swiper-container
+                height: 206px
+            .swiper-bottom
+                bottom: 16px
+                padding: 0 16px
+    .mortgage-slider
+        .swiper-slide
+            width: 85%

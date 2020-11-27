@@ -1,0 +1,241 @@
+// VARIABLES SECTION
+$gilroy: 'Gilroy', sans-serif // Gilroy font-family
+$primary-font-size: 14px // Body font-size
+$primary-color: #222630 // Primary text color
+$grey-color: #89919A // Grey color
+$white-color: #FFF // White color
+$salad-color: #9BC130 // Salad color
+$blue-color: #0090D7 // Blue color
+$turquoise-color: #1BB0AC // Turquoise color
+$orange-color: #F49528 // Orange color
+$salad-hover-color: #AFCD59 // Salad hover color
+$blue-hover-color: #33A6DF // Blue hover color
+$turquoise-hover-color: #49C0BD // Turquoise hover color
+$orange-hover-color: #F6AA53 // Orange hover color
+
+// COMMON DOCUMENT STYLES
+body
+    position: relative
+    overflow-x: hidden
+    font-family: $gilroy
+    font-size: $primary-font-size
+    line-height: 1.2
+    color: $primary-color
+    background: #F6F6F6
+
+ul,
+ol,
+li
+    display: block
+    padding: 0
+    margin: 0
+    list-style: none
+
+h1, h2, h3, h4, h5, h6
+    margin: 0
+
+p
+    margin: 0
+
+a
+    color: inherit
+    transition: all 0.5s
+    &:hover
+        color: inherit
+        text-decoration: none
+
+img
+    max-width: 100%
+
+// COMMON FOR PAGE ˆ
+.scroll-disabled
+    overflow-y: hidden
+
+.index-people,
+.index-park,
+.index-avenue
+    .main__menu
+        background: linear-gradient(rgba(#1D1D1B, 1), rgba(#1D1D1B, 0))
+    .menu__list:not(.menu__list--overlay)
+        color: $white-color
+        border-bottom: 1px solid rgba($white-color, 0.2)
+    .menu__link--sub
+        &::after
+            content: ''
+            display: inline-block
+            margin: -2px 0 0 7px
+            width: 10px
+            height: 4px
+            vertical-align: middle
+            background-image: url(../img/dist/sprite.svg#dropdown-main)
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: center
+            transition: background 0.5s
+        &:hover
+            &::after
+                background-image: url(../img/dist/sprite.svg#dropdown-main-active)
+    .menu__link--cta
+        padding-bottom: 37px
+        border-bottom: 3px solid transparent
+        span
+            display: inline-block
+            padding: 16px 16px 13px
+            font-weight: bold
+            background: transparent
+            border: 1px solid rgba($white-color, 0.2)
+            border-radius: 8px
+
+.index-people
+    .main
+        background: linear-gradient(to top, rgba(#F6F6F6, 1) 0%, rgba(#F6F6F6, 0) 20%)
+
+.container
+    margin: 0 auto
+    max-width: 1440px
+
+.container-flex
+    display: flex
+    margin: 0 auto
+    max-width: 1440px
+
+.container-right
+    width: 100%
+
+.section-heading
+    margin-bottom: 24px
+    &__title
+        font-weight: 600
+    &__title--normal
+        font-weight: normal
+    &__description
+        margin-top: 17px
+        max-width: 688px
+        font-size: 18px
+        font-weight: 500
+        line-height: 150%
+
+.head
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.switch
+    display: flex
+    align-items: center
+    border-radius: 8px
+    &__item
+        padding: 14px 10px
+        width: 136px
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        background: $white-color
+        cursor: pointer
+        &.active
+            color: $white-color
+            background: $blue-color
+        &:first-child
+            border-radius: 8px 0 0 8px
+        &:last-child
+            border-radius: 0 8px 8px 0
+
+.btn
+    &--people
+        color: $white-color
+        background: $blue-color
+        &:hover
+            background: $blue-hover-color
+    &--park
+        color: $white-color
+        background: $salad-color
+        &:hover
+            background: $salad-hover-color
+    &--avenue
+        color: $white-color
+        background: $turquoise-color
+        &:hover
+            background: $turquoise-hover-color
+    &--orange
+        color: $white-color
+        background: $orange-color
+        &:hover
+            background: $orange-hover-color
+
+// MEDIA QUARIES
+@media (min-width: 1440px)
+    .negative-top
+        margin-top: -82px
+
+@media (min-width: 992px) and (max-width: 1439px)
+    .head
+        margin-bottom: 12px
+
+@media (min-width: 992px)
+    h1
+        font-size: 48px
+        font-weight: bold
+    h3
+        font-size: 36px
+        line-height: 125%
+    .container
+        padding: 0 32px
+    .container-flex
+        padding: 0 32px
+    .container-right
+        margin-left: auto
+        max-width: 1032px
+    .container-left
+        max-width: 312px
+        min-width: 312px
+        width: 100%
+    .head
+        margin-top: 50px
+        &__title
+            font-size: 48px
+
+@media (max-width: 991px)
+    h3
+        font-size: 24px
+        line-height: 125%
+    .container
+        padding: 0 16px
+    .container-flex
+        padding: 0 16px
+    .column-reverse
+        flex-direction: column-reverse
+    .section-heading
+        &--top
+            margin-top: 32px
+        &__title
+            font-weight: bold
+    .head
+        margin-top: 24px
+        margin-bottom: 12px
+
+@media (max-width: 767px)
+    .column-reverse-sm
+        flex-direction: column-reverse
+
+@media (min-width: 576px) and (max-width: 991px)
+    h1
+        font-size: 36px
+        font-weight: bold
+    .head
+        margin-left: -126px
+        &__title
+            font-size: 36px
+            font-weight: bold
+
+@media (max-width: 575px)
+    h1
+        font-size: 24px
+        font-weight: bold
+    .head
+        margin-left: -112px
+        &__title
+            font-size: 24px
+            font-weight: bold
+    .column-reverse-m
+        flex-direction: column-reverse

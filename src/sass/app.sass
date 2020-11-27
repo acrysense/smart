@@ -1,0 +1,2214 @@
+@import "config" // Always at the beginning
+@import "header"
+@import "breadcrumb"
+@import "slider"
+@import "modal"
+@import "footer"
+
+// INDEX PAGE ˆ
+.main
+    position: relative
+    &--people
+        min-height: 268px
+    &--full
+        height: 100vh
+    &__slider
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: -1
+    &__tabs
+        position: absolute
+        bottom: -15px
+        width: 100%
+
+.offer
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1
+    padding: 0 32px
+    max-width: 1440px
+    width: 100%
+    height: 100vh
+    color: $white-color
+    &__title
+        position: absolute
+        top: 50%
+        left: 376px
+        transform: translateY(-50%)
+        max-width: 1032px
+        width: 100%
+        font-size: 64px
+        font-weight: normal
+        span
+            display: block
+            font-weight: 600
+
+.content-promo
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 48px
+
+.content-main
+    position: relative
+    z-index: 100
+
+.promo
+    &--flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &--people
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 48px
+    &--left
+        margin-top: 199px
+    &__item
+        display: block
+        position: relative
+        padding: 24px 32px
+        min-height: 150px
+        color: $white-color
+        border-radius: 8px
+        &:hover
+            color: $white-color
+    &__item--bg
+        min-height: 129px
+    &__item--flex
+        width: 328px
+    &__item--flat + &__item--flat
+        margin-top: 12px
+    &__item--orange
+        background: $orange-color
+        &:hover
+            background: $orange-hover-color
+    &__item--blue
+        background: $blue-color
+        &:hover
+            background: $blue-hover-color
+    &__item--turquoise
+        background: $turquoise-color
+        &:hover
+            background: $turquoise-hover-color
+    &__item--salad
+        background: $salad-color
+        &:hover
+            background: $salad-hover-color
+    &__title
+        display: block
+        overflow: hidden
+        max-height: 56px
+        font-size: 24px
+        font-weight: 600
+    &__title--flat
+        max-width: 162px
+    &__description
+        position: absolute
+        bottom: 25px
+        max-width: 264px
+        font-weight: 500
+    &__more
+        position: absolute
+        bottom: 24px
+        font-size: 14px
+        font-weight: 600
+        line-height: 100%
+    &__bg
+        display: block
+        position: absolute
+        bottom: 0
+        right: -34px
+        width: 259px
+        height: 173px
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center
+
+.go-btn
+    position: absolute
+    bottom: 24px
+    display: inline-block
+    padding: 3px
+    margin-top: 20px
+    width: 24px
+    height: 24px
+    border: 1px solid rgba($white-color, 0.2)
+    border-radius: 8px
+    &--flat
+        top: 24px
+        right: 32px
+        margin-top: 0
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 16px
+        height: 16px
+        background: url(../img/dist/sprite.svg#arrow-right) no-repeat center
+
+// NEWS
+.articles
+    margin-top: 32px
+    &__wrapper,
+    &__inner
+        display: flex
+        justify-content: space-between
+    &__wrapper + &__wrapper
+        margin-top: 24px
+    &__inner
+        flex-direction: column
+
+.article
+    display: block
+    position: relative
+    color: $white-color
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    border-radius: 8px
+    &:hover
+        color: $white-color
+    &__text
+        display: block
+        font-size: 24px
+        font-weight: 600
+        
+.small-article
+    padding: 24px 32px
+    max-width: 328px
+    min-height: 150px
+
+.big-article
+    padding: 24px 32px
+    max-width: 680px
+    min-height: 324px
+    width: 100%
+
+.column-article
+    padding: 24px 27px 24px 32px
+    max-width: 328px
+    min-height: 324px
+
+// ABOUT
+.about
+    position: relative
+    &__wrapper--main
+        padding: 88px 0 91px
+        margin: 48px 0
+        background: $white-color
+        border-radius: 8px
+    &__wrapper--common
+        position: relative
+        padding: 88px 0 38px
+        margin: 36px 0 56px
+        &::before
+            content: ''
+            position: absolute
+            top: -10px
+            left: 0
+            width: 276px
+            height: 355px
+            background: url(../img/dist/sprite.svg#icon-s) no-repeat center
+    &__title
+        font-weight: normal
+    &__title--main
+        margin: 0 136px 28px auto
+        max-width: 550px
+    &__title--common
+        margin: 0 136px 39px 376px
+        max-width: 400px
+    &__inner
+        display: flex
+    &__inner--main
+        padding: 0 172px
+    &__inner--common
+        max-width: 1032px
+    &__left,
+    &__right
+        width: 50%
+    &__left
+        position: relative
+    &__left--main
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 172px
+            height: 221px
+            background: url(../img/dist/sprite.svg#icon-s) no-repeat center
+    &__img
+        position: absolute
+        cursor: pointer
+    &__img--main
+        &:first-child
+            right: 40px
+            bottom: 39px
+        &:last-child
+            right: 101px
+            bottom: -43px
+    &__img--common
+        width: 344px
+        height: 211px
+        &:first-child
+            right: 70px
+            bottom: 101px
+        &:last-child
+            right: 172px
+            bottom: -38px
+    &__description
+        max-width: 344px
+        font-size: 16px
+        font-weight: 500
+        line-height: 150%
+    &__description + &__description
+        margin-top: 20px
+    &__btn
+        display: inline-block
+        margin-top: 30px
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        color: $white-color
+        border-radius: 8px
+        &:hover
+            color: $white-color
+    &__btn--main
+        padding: 15px 20px 13px
+    &__btn--common
+        padding: 23px 20px 21px
+        width: 287px
+
+// APARTMENTS
+.filter
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    &--projects
+        flex-wrap: wrap
+    &__title
+        margin-bottom: 4px
+        font-size: 12px
+        font-weight: bold
+        text-transform: uppercase
+    &__title--grey
+        color: $grey-color
+    &__select
+        padding: 14px 16px
+        font-size: 15px
+        font-weight: 600
+        line-height: 20px
+        color: $grey-color
+        background: $white-color url('../img/dist/sprite.svg#chevron-down')
+        background-repeat: no-repeat
+        background-size: 10px
+        background-position: right 20px center
+        border: none
+        border-radius: 8px
+        text-indent: 0.01px
+        text-overflow: ''
+        appearance: none
+        &:focus
+            outline: none
+        &::-ms-expand
+            display: none
+    &__checkbox-group
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+        overflow: hidden
+        background: $white-color
+        border-radius: 8px
+    &__item
+        width: 100%
+        transition: background 0.5s
+        &:hover
+            background: #E1E3E5
+    &__item.active
+        background: #E1E3E5
+    &__item--people.active
+        background: $blue-color
+        .filter__text
+            color: $white-color
+    &__item--park.active
+        background: $salad-color
+        .filter__text
+            color: $white-color
+    &__item--avenue.active
+        background: $turquoise-color
+        .filter__text
+            color: $white-color
+    &__label
+        display: flex
+        padding: 14px 10px
+        margin: 0
+        min-width: 68px
+        height: 48px
+        font-size: 0
+        text-align: center
+        cursor: pointer
+        &--checked
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: -1px
+                right: -1px
+                bottom: -1px
+                left: -1px
+                border: 1px solid $salad-color
+                border-radius: 8px
+        .filter__box
+            display: none
+    &__box
+        display: inline-block
+        position: relative
+        flex-shrink: 0
+        width: 16px
+        height: 16px
+        margin-right: 7px
+        border: 1px solid #e3e5e8
+        border-radius: 2px
+        background: #f4f5f6
+    &__checkbox
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 10
+        margin: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+        &:checked
+            .filter__label
+                background: red
+    &__text
+        display: block
+        width: 100%
+        color: $primary-color
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        transition: color 0.5s
+    &__input-block,
+    &__btn-block
+        display: flex
+        align-items: center
+    &__input
+        padding: 14px 16px
+        height: 48px
+        background: $white-color
+        border: none
+        border-radius: 8px
+    &__input--large
+        width: 100%
+    &__input + &__input
+        margin-left: 8px
+    &__reset
+        display: inline-block
+        padding: 14px 16px
+        margin-right: 8px
+        width: 100%
+        font-size: 16px
+        font-weight: 600
+        text-align: center
+        color: $primary-color
+        background: $white-color
+        border-radius: 8px
+        &::before
+            content: ''
+            display: inline-block
+            margin-right: 6px
+            width: 12px
+            height: 12px
+            background-image: url(../img/dist/sprite.svg#icon-reset)
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: center
+    &__btn
+        display: inline-block
+        padding: 14px 20px
+        width: 100%
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        color: $white-color
+        border-radius: 8px
+        &:hover
+            color: $white-color
+        &--projects
+            padding: 22px 20px
+        &--large
+            max-width: 424px
+        &--medium
+            max-width: 360px
+        &--small
+            max-width: 328px
+
+.apt-features
+    margin-top: 16px
+    &__title
+        margin-bottom: 4px
+        font-size: 12px
+        font-weight: bold
+        line-height: 16px
+        text-transform: uppercase
+        color: $grey-color
+    &__wrapper
+        display: flex
+        align-items: center
+    &__item
+        position: relative
+        padding: 14px 32px
+        font-weight: 500
+        line-height: 20px
+        border: 1px solid #E1E3E5
+        border-radius: 41px
+        cursor: pointer
+        transition: border 0.5s
+        &::before
+            content: ''
+            display: inline-block
+            margin-right: 9px
+            vertical-align: middle
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: center
+        &:hover
+            border: 1px solid #89919A
+    &__item + &__item
+        margin-left: 8px
+    &__item--key
+        &::before
+            width: 18px
+            height: 18px
+            background-image: url(../img/dist/sprite.svg#password)
+    &__item--window
+        &::before
+            width: 20px
+            height: 20px
+            background-image: url(../img/dist/sprite.svg#window)
+    &__item--closet
+        &::before
+            width: 20px
+            height: 20px
+            background-image: url(../img/dist/sprite.svg#closet)
+    &__item--toilet
+        &::before
+            width: 14px
+            height: 16px
+            background-image: url(../img/dist/sprite.svg#toilet)
+
+.sort
+    margin-left: auto
+    &--flex
+        display: flex
+        justify-content: flex-end
+        margin-top: 32px
+    &__btn
+        display: inline-block
+        font-weight: 500
+        color: $primary-color
+        &::after
+           content: ''
+           display: inline-block
+           margin-left: 6px
+           width: 16px
+           height: 16px
+           vertical-align: middle
+           background-image: url(../img/dist/sprite.svg#icon-sort)
+           background-repeat: no-repeat
+           background-size: 100%
+           background-position: center
+           transition: all 0.5s
+        &:hover
+            color: $blue-color
+            &::after
+                background-image: url(../img/dist/sprite.svg#icon-sort-blue)
+    &__btn--up
+        &::after
+            transform: rotate(180deg)
+    &__btn + &__btn
+        margin-left: 32px
+
+.apartments
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        margin-top: 24px
+    &__item
+        overflow: hidden
+        margin-bottom: 32px
+        max-width: 240px
+        background: $white-color
+        border-radius: 8px
+    &__head
+        display: block
+        position: relative
+    &__icon
+        display: block
+        position: absolute
+        top: 12px
+        right: 12px
+        width: 48px
+        height: 48px
+        border-radius: 50px
+        img
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            z-index: 1
+            width: 24px
+            height: 24px
+    &__body
+        padding: 0 12px 17px 12px
+    &__name
+        font-size: 16px
+        font-weight: bold
+    &__details
+        display: flex
+        margin-top: 17px
+    &__group + &__group
+        margin-left: 28px
+    &__group-title
+        font-size: 11px
+        font-weight: 500
+    &__group-title--grey
+        color: $grey-color
+    &__group-value
+        margin-top: 3px
+        font-size: 13px
+        font-weight: 500
+    &__footer
+        margin: 0 12px 17px 12px
+        border-top: 1px solid rgba(#000, 0.1)
+    &__price
+        margin: 17px 0 5px
+        font-size: 16px
+        font-weight: bold
+    &__price--people
+        color: $blue-color
+    &__price--park
+        color: $salad-color
+    &__price--avenue
+        color: $turquoise-color
+    &__mortgage
+        font-weight: 500
+    &__more
+        display: flex
+        justify-content: center
+        margin-bottom: 64px
+    &__load-more
+        display: inline-block
+        padding: 15px 20px 13px
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        color: $white-color
+        border-radius: 8px
+        &:hover
+            color: $white-color
+    &__load-more--large
+        max-width: 234px
+        width: 100%
+
+// MAP
+.map
+    margin-bottom: 53px
+    &__bg
+        height: 600px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: -76px
+        padding: 36px 86px
+        background: $white-color
+        border-radius: 8px
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: column
+        height: 84px
+    &__icon
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center
+    &__icon--kindergarten
+        width: 39px
+        height: 43px
+        background-image: url(../img/dist/sprite.svg#kindergarten)
+    &__icon--school
+        width: 37px
+        height: 42px
+        background-image: url(../img/dist/sprite.svg#school)
+    &__icon--shop
+        width: 37px
+        height: 41px
+        background-image: url(../img/dist/sprite.svg#shop)
+    &__icon--pharmacy
+        width: 42px
+        height: 42px
+        background-image: url(../img/dist/sprite.svg#pharmacy)
+    &__icon--park
+        width: 38px
+        height: 52px
+        background-image: url(../img/dist/sprite.svg#park)
+    &__icon--fitness
+        width: 41px
+        height: 41px
+        background-image: url(../img/dist/sprite.svg#fitness)
+    &__name
+        margin-top: 17px
+        font-size: 14px
+        font-weight: 500
+        line-height: 150%
+
+// SMARTPHONE
+.smartphone
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        padding: 94px 86px 68px
+        background: $white-color
+        border-radius: 8px
+    &__right
+        margin-left: auto
+    &__title
+        max-width: 400px
+        font-weight: bold
+    &__description
+        margin-top: 25px
+        max-width: 516px
+        font-size: 18px
+        font-weight: 500
+        line-height: 150%
+    &__downloads
+        display: flex
+        align-items: center
+        margin-top: 52px
+    &__google-play
+        display: block
+        width: 140px
+        height: 42px
+        background-image: url(../img/dist/sprite.svg#gp)
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center
+    &__app-store
+        display: block
+        margin-left: 10px
+        width: 126px
+        height: 42px
+        background-image: url(../img/dist/sprite.svg#app-store)
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center
+
+.advantages
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    max-width: 556px
+    &--full
+        max-width: 616px
+    &__item
+        margin-top: 26px
+    &__icon
+        display: inline-block
+        position: relative
+        width: 24px
+        height: 24px
+        background: $white-color
+        border: 1px solid #E1E3E5
+        border-radius: 8px
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 12px
+            height: 12px
+            background: url(../img/dist/sprite.svg#icon-check) no-repeat center
+    &__description
+        margin-top: 8px
+        max-width: 172px
+        font-weight: 500
+        line-height: 125%
+
+// ABOUT PAGE ˆ
+.about-full
+    height: 660px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+
+.smart-yard
+    position: relative
+    &__wrapper
+        padding: 137px 173px 127px 173px
+        width: 860px
+        height: 752px
+        background: $white-color
+        border-radius: 8px
+    &__title
+        font-size: 48px
+
+.tabs
+    margin-top: 34px
+    &__item
+        font-size: 18px
+        font-weight: 500
+        line-height: 200%
+        color: $grey-color
+        cursor: pointer
+        transition: all 0.5s
+        &.active
+            color: $primary-color
+            &::before
+                content: '-'
+                display: inline-block
+                margin-right: 5px
+    &__content
+        display: none
+        position: absolute
+        bottom: -36px
+        margin-left: 517px
+        width: 687px
+        &.active
+            display: block
+    &__counter
+        position: absolute
+        bottom: -36px
+        margin-left: 1085px
+        color: $white-color
+    &__counter--current
+        font-size: 64px
+        font-weight: 500
+        line-height: 150%
+    &__counter--total
+        font-size: 14px
+        font-weight: 500
+        line-height: 150%
+
+.decor
+    position: absolute
+    top: 102px
+    margin-left: 1032px
+    font-size: 144px
+    font-weight: 300
+    &--concept
+        top: 185px
+    &__img
+        width: 344px
+        height: 688px
+        background-repeat: no-repeat
+        background-size: 100%
+    &__text
+        margin-top: -150px
+        margin-left: 86px
+        writing-mode: vertical-lr
+        transform: rotate(180deg)
+        span
+            display: block
+            &:first-child
+                margin-right: -50px
+            strong
+                font-weight: bold
+
+.smart-flat
+    position: relative
+    &__wrapper
+        padding: 93px 172px 55px
+        max-height: 831px
+        background: $white-color
+    &__title
+        font-size: 48px
+        span
+            font-weight: bold
+    &__description
+        margin-top: 27px
+        margin-left: 172px
+        max-width: 343px
+        font-size: 16px
+        font-weight: 500
+        line-height: 150%
+    &__description--bold
+        font-weight: bold
+    &__background
+        position: relative
+        height: 756px
+    &__bg
+        width: 100%
+        height: 100%
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+
+.plus
+    padding: 32px 48px
+    &__title
+        font-size: 24px
+        font-weight: 500
+        line-height: 150%
+    &__description
+        margin-top: 16px
+        max-width: 404px
+        font-size: 18px
+        font-weight: 500
+        line-height: 150%
+
+// PURCHASE PAGE ˆ
+.consult-form
+    padding: 32px
+    background: $white-color
+    &--mobile
+        min-width: 235px
+        max-width: 235px
+        width: 100%
+        margin-top: 48px
+        margin-right: 16px
+    &--small
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        max-width: 351px
+    &__title
+        font-size: 24px
+        font-weight: bold
+    &__description
+        margin: 18px 0 24px
+        font-size: 14px
+        font-weight: 600
+        line-height: 150%
+    &__description--small
+        margin: 10px 0 18px
+    &__group
+        margin-bottom: 24px
+    &__group--small
+        margin-bottom: 8px
+    &__label
+        margin: 0 0 4px 0
+        font-size: 12px
+        font-weight: bold
+        line-height: 16px
+        text-transform: uppercase
+    &__input
+        padding: 14px 16px
+        width: 100%
+        font-weight: 600
+        color: $primary-color
+        background: #F6F6F6
+        border: 1px solid transparent
+        border-radius: 8px
+        transition: all 0.5s
+        &::placeholder
+            font-weight: normal
+            color: $grey-color
+        &:focus
+            outline: none
+            background: $white-color
+            border: 1px solid #E1E3E5
+    &__btn
+        padding: 22px 20px
+        width: 100%
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        color: $white-color
+        background: $orange-color
+        border: none
+        border-radius: 8px
+
+.custom-checkbox
+    display: flex
+    margin-top: 16px
+    margin-bottom: 0
+    cursor: pointer
+    &--small
+        margin-top: 12px
+    &__input
+        display: none
+        &:checked + .custom-checkbox__icon
+            background-image: url(../img/dist/sprite.svg#icon-check)
+            background-repeat: no-repeat
+            background-size: 70%
+            background-position: center
+    &__icon
+        display: block
+        min-width: 14px
+        min-height: 14px
+        width: 14px
+        height: 14px
+        background: #F6F6F6
+        border: none
+        border-radius: 4px
+    &__label
+        display: inline-block
+        margin-left: 6px
+        font-size: 12px
+        font-weight: 500
+        color: rgba($primary-color, 0.3)
+        a
+            border-bottom: 1px solid rgba($primary-color, 0.3)
+
+.banner
+    position: relative
+    height: 500px
+    color: $white-color
+    &__text
+        position: absolute
+        top: 72px
+        left: 32px
+    &__description
+        margin-top: 20px
+        max-width: 484px
+        font-size: 18px
+        font-weight: 600
+        line-height: 150%
+    &__img
+        position: absolute
+        top: 0
+        right: 0
+        max-width: 747px
+        width: 100%
+        height: 500px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+
+.calc
+    padding: 32px 24px 48px 32px
+    margin-top: 48px
+    background: $white-color
+    &__top
+        padding-bottom: 33px
+        border-bottom: 1px solid #E1E3E5
+    &__title
+        font-size: 24px
+        font-weight: bold
+    &__content
+        display: flex
+        flex-wrap: wrap
+        padding-top: 32px
+    &__item
+        margin-bottom: 32px
+    &__head
+        height: 70px
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center
+    &__body
+        margin-top: 30px
+    &__info
+        display: flex
+        justify-content: space-between
+        align-items: center
+        font-size: 15px
+        font-weight: 500
+        line-height: 20px
+    &__info + &__info
+        margin-top: 8px
+    &__heading
+        color: $grey-color
+    &__value
+        color: #282828
+    &__btn
+        display: inline-block
+        padding: 16px 24px
+        margin-top: 22px
+        width: 100%
+        font-weight: 500
+        line-height: 16px
+        text-align: center
+        background: $white-color
+        border: 1px solid #E1E3E5
+        border-radius: 8px
+        box-shadow: 0 3px 6px rgba(#000, 0.08)
+        &:hover
+            color: $white-color
+            border: 1px solid transparent
+            box-shadow: none
+    &__btn--people
+        &:hover
+            background: $blue-color
+    &__btn--park
+        &:hover
+            background: $salad-color
+    &__btn--avenue
+        &:hover
+            background: $turquoise-color
+    &__summary
+        display: flex
+        align-items: center
+        padding-top: 24px
+        border-top: 1px solid #E1E3E5
+    &__label
+        font-size: 12px
+        font-weight: bold
+        line-height: 16px
+        text-transform: uppercase
+    &__input
+        padding: 14px 16px
+        margin-top: 4px
+        width: 100%
+        height: 48px
+        background: #F6F6F6
+        border: none
+        border-radius: 8px
+    &__input--small
+        width: 100%
+    &__sum
+        height: 48px
+        font-size: 24px
+        font-weight: bold
+        line-height: 48px
+    &__sum--people
+        color: $blue-color
+    &__sum--park
+        color: $salad-color
+    &__sum--avenue
+        color: $turquoise-color
+
+.warning
+    margin-bottom: 94px
+    &__wrapper
+        color: $primary-color
+        text-align: center
+    &__btn
+        display: inline-block
+        padding: 16px 36px
+        color: $white-color
+        border-radius: 8px
+        &:hover
+            color: $white-color
+
+// INFRASTRUCTURE PAGE ˆ
+.infrastructure
+    &--company-top
+        margin: 32px 0 48px
+    &--company-bottom
+        overflow: hidden
+        margin-top: 48px
+        border-radius: 8px
+    &__wrapper
+        background: $white-color
+    &__wrapper--top
+        padding: 80px 172px 56px
+        border-radius: 8px 8px 0 0
+    &__wrapper--bottom
+        display: flex
+        justify-content: space-between
+        padding: 64px 172px 59px
+        border-radius: 0 0 8px 8px
+    &__left
+        max-width: 332px
+    &__right
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            top: -20px
+            right: -20px
+            z-index: 0
+            width: 312px
+            height: 229px
+            background: #F6F6F6
+        img
+            position: relative
+            z-index: 1
+    &__title
+        font-weight: 300
+        span
+            font-weight: bold
+    &__title--big
+        font-size: 48px
+    &__title--park
+        span
+            color: $salad-color
+    &__description
+        max-width: 688px
+        font-size: 18px
+        font-weight: 600
+        line-height: 150%
+    &__head
+        font-size: 24px
+        font-weight: 500
+    &__text
+        margin-top: 18px
+        font-size: 16px
+        font-weight: 500
+        line-height: 150%
+    &__bg
+        position: relative
+        height: 100%
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        border-radius: 0 0 8px 8px
+    &__bg--company
+        height: 100%
+        border-radius: 8px
+        object-fit: cover
+    &__features
+        display: flex
+        justify-content: space-between
+        margin-top: 16px
+        max-width: 688px
+    &__mini-description
+        max-width: 330px
+        font-size: 16px
+        font-weight: 500
+        line-height: 150%
+    &__btn
+        display: inline-block
+        padding: 17px 73px 14px
+        margin-top: 22px
+        font-size: 14px
+        font-weight: 600
+        line-height: 100%
+        text-align: center
+        color: $white-color
+        background: $blue-color
+        border-radius: 8px
+        &:hover
+            color: $white-color
+
+// FLAT PAGE ˆ
+.flat
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        padding: 48px 64px
+        margin-bottom: 64px
+        background: $white-color
+        border-radius: 8px
+    &__left,
+    &__right
+        width: 50%
+    &__top
+        display: flex
+        justify-content: space-between
+    &__switch
+        display: flex
+        max-height: 48px
+        width: 204px
+        background: $white-color
+        border-radius: 8px
+    &__item
+        padding: 14px 10px
+        width: 100%
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        cursor: pointer
+        &:first-child
+            max-width: 127px
+            border-top: 1px solid #E1E3E5
+            border-bottom: 1px solid #E1E3E5
+            border-left: 1px solid #E1E3E5
+            border-radius: 8px 0 0 8px
+        &:last-child
+            max-width: 77px
+            border-top: 1px solid #E1E3E5
+            border-right: 1px solid #E1E3E5
+            border-bottom: 1px solid #E1E3E5
+            border-radius: 0 8px 8px 0
+    &__item--active-people
+        color: $white-color
+        background: $blue-color
+        &:first-child,
+        &:last-child
+            border: none
+    &__item--active-park
+        color: $white-color
+        background: $salad-color
+        &:first-child,
+        &:last-child
+            border: none
+    &__item--active-avenue
+        color: $white-color
+        background: $turquoise-color
+        &:first-child,
+        &:last-child
+            border: none
+    &__compass
+        &::before
+            content: ''
+            display: inline-block
+            width: 60px
+            height: 61px
+            background-repeat: no-repeat
+            background-size: 100%
+    &__compass--people
+        &::before
+            background-image: url(../img/dist/sprite.svg#compass-people)
+    &__compass--park
+        &::before
+            background-image: url(../img/dist/sprite.svg#compass-park)
+    &__compass--avenue
+        &::before
+            background-image: url(../img/dist/sprite.svg#compass-avenue)
+    &__body
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__nav
+        text-align: center
+    &__arrow
+        display: inline-block
+        position: relative
+        width: 48px
+        height: 48px
+        background: #fff
+        border: 1px solid #E1E3E5
+        border-radius: 8px
+        box-shadow: 0 3px 6px rgba(0,0,0,0.08)
+        &::before
+            content: ''
+            display: inline-block
+            width: 48px
+            height: 48px
+            background-image: url(../img/dist/sprite.svg#arrow-left-black)
+            background-repeat: no-repeat
+            background-size: 16px
+            background-position: center
+        &:hover
+            background: #F6F6F6
+            border: 1px solid transparent
+        &:focus
+            outline: none
+    &__arrow--up
+        &::before
+            transform: rotate(90deg)
+    &__arrow--down
+        &::before
+            transform: rotate(-90deg)
+    &__counter
+        margin: 16px 0 13px
+        font-size: 0
+        font-weight: bold
+    &__right
+        padding-left: 64px
+        border-left: 1px solid rgba(#000, 0.1)
+    &__price
+        font-size: 36px
+        font-weight: bold
+    &__price--people
+        color: $blue-color
+    &__price--park
+        color: $salad-color
+    &__price--avenue
+        color: $turquoise-color
+    &__mortgage
+        font-size: 14px
+        font-weight: 500
+    &__mortgage--people
+        color: $blue-color
+        border-bottom: 1px solid $blue-color
+        &:hover
+            color: $blue-color
+    &__mortgage--park
+        color: $salad-color
+        border-bottom: 1px solid $salad-color
+        &:hover
+            color: $salad-color
+    &__mortgage--avenue
+        color: $turquoise-color
+        border-bottom: 1px solid $turquoise-color
+        &:hover
+            color: $turquoise-color
+    &__rent
+        font-size: 14px
+        font-weight: 500
+    &__details
+        display: flex
+        flex-wrap: wrap
+        margin: 24px 0 33px
+    &__group
+        margin-top: 25px
+        width: 50%
+    &__head
+        font-size: 14px
+        font-weight: 500
+        color: $grey-color
+    &__value
+        margin-top: 5px
+        font-size: 18px
+        font-weight: 500
+    &__inner
+        padding-top: 60px
+        border-top: 1px solid rgba(#000, 0.08)
+    &__inner--small
+        padding-top: 16px
+    &__description
+        font-size: 14px
+        font-weight: 500
+        line-height: 150%
+    &__btns
+        display: flex
+        align-items: center
+        flex-direction: column
+        margin-top: 26px
+    &__btn
+        display: inline-block
+        padding: 14px 20px
+        width: 100%
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        border: 1px solid #E1E3E5
+        border-radius: 8px
+        box-shadow: 0 3px 6px rgba(#000, 0.08)
+    &__btn + &__btn
+        margin-top: 16px
+    &__btn--people
+        color: $white-color
+        background: $blue-color
+        border: none
+        box-shadow: none
+        &:hover
+            color: $white-color
+    &__btn--park
+        color: $white-color
+        background: $salad-color
+        border: none
+        box-shadow: none
+        &:hover
+            color: $white-color
+    &__btn--avenue
+        color: $white-color
+        background: $turquoise-color
+        border: none
+        box-shadow: none
+        &:hover
+            color: $white-color
+
+// CONTACT PAGE ˆ
+.contact
+    &__description
+        max-width: 257px
+        font-size: 16px
+        font-weight: 500
+    &__btn
+        display: inline-block
+        padding: 14px 20px
+        margin-top: 16px
+        font-size: 14px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        color: $white-color
+        background: $blue-color
+        border-radius: 83px
+        &:hover
+            color: $white-color
+    &__wrapper
+        margin-bottom: 32px
+    &__item
+        display: flex
+        justify-content: space-between
+        padding-bottom: 33px
+        margin-right: 146px
+        border-bottom: 1px solid #E1E3E5
+    &__item + &__item
+        padding-top: 32px
+    &__title
+        font-size: 24px
+        font-weight: normal
+        span
+            display: block
+            font-weight: bold
+    &__number
+        display: block
+        margin-bottom: 4px
+        font-size: 18px
+        font-weight: bold
+    &__email
+        display: inline-block
+        margin-bottom: 24px
+        font-size: 16px
+        font-weight: 500
+        border-bottom: 1px solid $primary-color
+    &__address,
+    &__schedule
+        font-size: 14px
+        font-weight: 500
+    &__address
+        margin-bottom: 4px
+
+// ALL NEWS PAGE ˆ
+.type
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+    &__item
+        padding: 15px 20px 13px
+        min-width: 72px
+        font-size: 14px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        color: $grey-color
+        border: 1px solid #E1E3E5
+        border-radius: 83px
+        cursor: pointer
+        transition: all 0.5s
+        &:hover
+            color: $primary-color
+            border: 1px solid #89919A
+    &__item--active
+        color: $primary-color
+        background: $white-color
+        border: none
+    &__item + &__item
+        margin-left: 8px
+
+.news
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+    &__item--large,
+    &__item--small
+        margin-bottom: 32px
+    &__head
+        display: block
+        position: relative
+        overflow: hidden
+        border-radius: 8px 8px 0 0
+    &__img
+        width: 100%
+    &__type
+        display: block
+        position: absolute
+        bottom: 17px
+        left: 24px
+        padding: 6px 16px
+        font-size: 10px
+        font-weight: bold
+        line-height: 12px
+        text-align: center
+        color: $white-color
+        border-radius: 50px
+    &__type--blue
+        background: $blue-color
+    &__type--orange
+        background: $orange-color
+    &__type--salad
+        background: $salad-color
+    &__body
+        background: $white-color
+    &__body--common
+        padding: 15px 34px 34px
+    &__body--main
+        padding: 15px 24px 34px
+    &__date
+        font-size: 14px
+        color: rgba($primary-color, 0.5)
+    &__title
+        display: inline-block
+        margin: 9px 0 18px
+        font-size: 24px
+        font-weight: 500
+        &:hover
+            color: $blue-color
+    &__load-more
+        display: block
+        padding: 14px 20px
+        margin: 0 auto
+        max-width: 202px
+        width: 100%
+        font-size: 14px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        color: $white-color
+        background: $blue-color
+        border-radius: 83px
+        &:hover
+            color: $white-color
+    &__more
+        display: block
+        padding: 14px 20px
+        margin: 0 auto 48px
+        max-width: 202px
+        width: 100%
+        font-size: 14px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        color: $white-color
+        background: $blue-color
+        border-radius: 8px
+        &:hover
+            color: $white-color
+
+// PROJECTS
+.projects
+    &--main
+        margin: 48px 0
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-top: 18px
+    &__item
+        overflow: hidden
+        max-width: 504px
+        width: 100%
+        border-radius: 8px
+    &__head
+        max-height: 299px
+        border-radius: 8px 8px 0 0
+    &__body
+        padding: 25px 32px 32px
+        background: $white-color
+        border-radius: 0 0 8px 8px
+    &__title
+        display: inline-block
+        font-size: 24px
+        font-weight: 600
+        line-height: 100%
+        &:hover
+            color: $blue-color
+    &__location
+        margin: 16px 0 23px
+        font-size: 16px
+        font-weight: 600
+        line-height: 100%
+        color: $grey-color
+    &__location--address,
+    &__location--details
+        display: block
+    &__location--address
+        margin-bottom: 4px
+        color: $blue-color
+        &::before
+            content: ''
+            display: inline-block
+            margin-right: 4px
+            width: 14px
+            height: 14px
+            vertical-align: middle
+            background-image: url(../img/dist/sprite.svg#location-blue)
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: center
+    &__list
+        padding-top: 16px
+        max-width: 440px
+        width: 100%
+        border-top: 1px solid #E1E3E5
+    &__apartments
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__apartments + &__apartments
+        margin-top: 13px
+    &__a-name,
+    &__a-size
+        font-size: 16px
+        font-weight: 500
+        color: $grey-color
+    &__a-name
+        max-width: 60px
+        width: 100%
+    &__a-size
+        margin-left: auto
+        max-width: 121px
+        width: 100%
+        text-align: right
+    &__a-price
+        margin-left: auto
+        max-width: 134px
+        width: 100%
+        font-size: 16px
+        font-weight: bold
+        text-align: right
+
+.main-tabs
+    &__text
+        margin-right: 15px
+        font-size: 18px
+        font-weight: 600
+        line-height: 100%
+        color: $white-color
+    &__list
+        display: flex
+        justify-content: flex-end
+        align-items: center
+    &__item
+        padding: 24px 32px
+        font-size: 18px
+        font-weight: 600
+        line-height: 100%
+        color: $primary-color
+        background: $white-color
+        border-radius: 8px 8px 0 0
+        cursor: pointer
+        &.active
+            color: $white-color
+            background: $salad-color
+    &__item + &__item
+        padding: 24px 44px
+        &.active
+            color: $white-color
+            background: $turquoise-color
+    &__content
+        display: none
+        background: $white-color
+        border-radius: 8px 0 8px 8px
+        &.active
+            display: block
+            border-top: 4px solid $salad-color
+    &__content + &__content
+        &.active
+            display: block
+            border-top: 4px solid $turquoise-color
+    &__title
+        font-weight: normal
+        span
+            display: block
+            font-weight: bold
+    &__title--park
+        span
+            color: $salad-color
+    &__title--avenue
+        span
+            color: $turquoise-color
+    &__inner
+        display: flex
+        justify-content: space-between
+        margin-top: 43px
+    &__group
+        padding-left: 24px
+        border-left: 1px solid #E1E3E5
+    &__name
+        font-size: 18px
+        font-weight: 600
+        line-height: 100%
+    &__price
+        margin-top: 8px
+        font-size: 14px
+        font-weight: 500
+        color: $grey-color
+
+// TIDINGS
+.tidings
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 24px
+    &__head
+        img
+            width: 100%
+    &__body
+        background: $white-color
+        border-radius: 0 0 8px 8px
+    &__type
+        padding: 10px 16px
+        font-size: 10px
+        font-weight: bold
+        line-height: 12px
+        color: $white-color
+        background: $blue-color
+        border-radius: 50px
+    &__date
+        font-size: 14px
+        color: $grey-color
+    &__description
+        max-width: 454px
+        font-size: 16px
+        font-weight: 500
+        line-height: 150%
+        span
+            font-weight: bold
+    &__description + &__description
+        margin-top: 25px
+
+// CONCEPT
+.concept
+    margin-top: -82px
+    &__wrapper
+        position: relative
+        margin-bottom: 87px
+        width: 100%
+    &__wrapper--circle
+        color: $white-color
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center
+        border-radius: 50% 50% 0 0
+    &__circle
+        position: absolute
+        left: 0
+        overflow: hidden
+        width: 100%
+        height: 100%
+        border-radius: 50%
+    &__circle-top
+        width: 100%
+        height: 688px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+    &__hashtag
+        position: absolute
+        top: 0
+        right: 0
+        font-size: 48px
+        font-weight: 300
+        color: $primary-color
+        span
+            font-weight: bold
+    &__title
+        max-width: 800px
+        font-size: 48px
+        font-weight: 300
+        span
+            display: block
+            font-weight: bold
+    &__inner
+        max-width: 344px
+    &__inner--large
+        max-width: 516px
+    &__left
+        position: relative
+        min-height: 516px
+        &::before
+            content: ''
+            position: absolute
+            top: -123px
+            left: 0
+            width: 344px
+            height: 442px
+            background-image: url(../img/dist/sprite.svg#icon-s)
+            background-repeat: no-repeat
+            background-size: 100%
+            background-position: center
+    &__img
+        position: absolute
+        width: 344px
+        cursor: pointer
+        &:first-child
+            left: 172px
+            bottom: 139px
+        &:last-child
+            left: 0
+            bottom: 0
+    &__right
+        overflow: hidden
+        margin: 0 172px 0 auto
+        width: 516px
+        height: 516px
+        border-radius: 50%
+        img
+            width: 100%
+            height: 100%
+    &__quote
+        position: absolute
+        max-width: 172px
+        font-size: 14px
+        font-weight: 500
+        font-style: italic
+        line-height: 150%
+    &__quote--left
+        top: 0
+        left: 0
+    &__quote--right
+        right: 0
+        bottom: 0
+    &__description
+        font-size: 16px
+        font-weight: 500
+        line-height: 150%
+        span
+            font-size: 18px
+            font-weight: 600
+    &__description + &__description
+        margin-top: 18px
+    &__description
+        &:nth-child(3)
+            margin-top: 34px
+
+// ACCORDION PAGE ˆ
+.accordion
+    &__wrapper
+        background: $white-color
+        border-radius: 8px
+    &__item
+        width: 100%
+        &--active .accordion__content
+            display: block
+        &--active .accordion__dropdown
+            transform: rotate(90deg)
+    &__item + &__item
+        margin-top: 8px
+    &__trigger
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 21px 24px
+        cursor: pointer
+        transition: background 0.5s
+    &__title
+        font-size: 14px
+        font-weight: bold
+        line-height: 125%
+    &__dropdown
+        width: 24px
+        height: 24px
+        background-image: url(../img/dist/sprite.svg#arrow-right-black)
+        background-repeat: no-repeat
+        background-size: 16px
+        background-position: center
+        border: 1px solid rgba(#1D1D1B, 0.1)
+        border-radius: 8px
+        transition: transform 0.5s
+    &__content
+        display: none
+        width: 100%
+    &__body
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 15px 24px
+    &__name
+        font-size: 14px
+        line-height: 125%
+        border-bottom: 1px solid $primary-color
+    &__info
+        display: flex
+        align-items: center
+    &__data
+        font-size: 14px
+        line-height: 125%
+        color: rgba($primary-color, 0.5)
+    &__data--time
+        margin-left: 5px
+    &__download
+        margin-left: 24px
+        width: 24px
+        height: 24px
+        background-image: url(../img/dist/sprite.svg#icon-download)
+        background-repeat: no-repeat
+        background-size: 16px
+        background-position: center
+        border: 1px solid rgba(#1D1D1B, 0.1)
+        border-radius: 8px
+
+// JOBS PAGE ˆ
+.jobs-form
+    &__description
+        margin-bottom: 24px
+        font-size: 14px
+        font-weight: 500
+        line-height: 150%
+    &__group
+        margin-bottom: 24px
+    &__label
+        margin: 0 0 4px 0
+        font-size: 12px
+        font-weight: bold
+        line-height: 16px
+        text-transform: uppercase
+    &__input
+        padding: 14px 16px
+        width: 100%
+        color: $primary-color
+        background: $white-color
+        border: none
+        border-radius: 8px
+        &::placeholder
+            color: $grey-color
+        &:focus
+            outline: none
+    &__inputfile
+        width: 0.1px
+        height: 0.1px
+        opacity: 0
+        overflow: hidden
+        position: absolute
+        z-index: -1
+    &__resume
+        display: inline-block
+        padding: 14px 20px
+        margin-bottom: 2px
+        width: 100%
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        color: #E1E3E5
+        background: $grey-color
+        border: none
+        border-radius: 8px
+        cursor: pointer
+    &__resume--upload
+        color: $white-color
+        background: $blue-color
+    &__help
+        display: block
+        font-size: 11px
+        font-weight: 500
+        line-height: 150%
+        color: $grey-color
+    &__btn
+        padding: 22px 20px
+        margin-top: 24px
+        width: 100%
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        color: $white-color
+        background: $orange-color
+        border: none
+        border-radius: 8px
+
+.jobs
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 21px 24px
+        background: $white-color
+        border-radius: 8px
+        cursor: pointer
+    &__item + &__item
+        margin-top: 4px
+    &__title
+        font-size: 14px
+        font-weight: bold
+        line-height: 125%
+    &__dropdown
+        width: 24px
+        height: 24px
+        background-image: url(../img/dist/sprite.svg#arrow-right-black)
+        background-repeat: no-repeat
+        background-size: 16px
+        background-position: center
+        border: 1px solid rgba(#1D1D1B, 0.1)
+        border-radius: 8px
+        transition: transform 0.5s
+
+// VACANCY PAGE ˆ
+.vacancy
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        background: $white-color
+        border-radius: 8px
+    &__item
+        width: 100%
+    &__title
+        font-size: 14px
+        font-weight: bold
+        line-height: 150%
+    &__description
+        font-size: 14px
+        font-weight: 500
+        line-height: 150%
+    &__btn
+        padding: 20px 20px
+        width: 100%
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        border: 1px solid $orange-color
+        border-radius: 8px
+        &:hover
+            color: $primary-color
+            background: $orange-color
+
+.download
+    display: flex
+    flex-wrap: wrap
+    padding: 12px 24px 0
+    &__item
+        padding: 24px
+        margin-bottom: 12px
+        width: 100%
+        background: $white-color
+        border: 1px solid #E1E3E5
+        border-radius: 8px
+    &__img
+        width: 70px
+        height: 70px
+        background-repeat: no-repeat
+        background-position: center
+    &__title
+        margin: 16px 0
+        font-size: 18px
+        font-weight: 600
+        line-height: 100%
+    &__btn
+        display: inline-block
+        padding: 14px 20px
+        width: 100%
+        font-size: 16px
+        font-weight: 600
+        line-height: 20px
+        text-align: center
+        background: $white-color
+        border: 1px solid #E1E3E5
+        border-radius: 8px
+        box-shadow: 0 3px 6px rgba(#000, 0.08)
+        &:hover
+            color: $white-color
+            border: 1px solid transparent
+            box-shadow: none
+    &__btn--people
+        &:hover
+            background: $blue-color
+    &__btn--park
+        &:hover
+            background: $salad-color
+    &__btn--avenue
+        &:hover
+            background: $turquoise-color
+
+// ROAD
+.road
+    position: relative
+    margin-left: 23px
+    max-width: 220px
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 50%
+        left: -19px
+        transform: translateY(-50%)
+        z-index: 0
+        width: 1px
+        height: 111px
+        background: #E1E3E5
+    &__item
+        display: inline-block
+        position: relative
+        padding: 12px 18px
+        font-size: 14px
+        font-weight: 600
+        line-height: 100%
+        color: rgba($primary-color, 0.5)
+        border: 1px solid transparent
+        border-radius: 83px
+        transition: all 0.5s
+        cursor: pointer
+        &::before
+            content: ''
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: -23px
+            transform: translateY(-50%)
+            z-index: 1
+            width: 7px
+            height: 7px
+            background: #F6F6F6
+            border: 1px solid #E1E3E5
+            border-radius: 50%
+            transition: all 0.5s
+        &:hover
+            color: $primary-color
+            &::before
+                background: $blue-color
+                border: 1px solid transparent
+        &.active
+            color: $primary-color
+            border: 1px solid #E1E3E5
+            &::before
+                background: $blue-color
+                border: 1px solid transparent
+    &__item + &__item
+        margin-top: 15px
+
+.pagination
+    &__list
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 24px auto 0
+    &__item + &__item
+        margin-left: 22px
+    &__item
+        &:nth-child(n + 2)
+            &.active
+                margin-left: 10px
+        &.active
+            padding: 9px 14px
+            color: $white-color
+            border-radius: 50%
+            .pagination__link
+                color: $white-color
+        &.active + .pagination__item
+            margin-left: 10px
+    &__item--people
+        &.active
+            background: $blue-color
+    &__item--park
+        &.active
+            background: $salad-color
+    &__item--avenue
+        &.active
+            background: $turquoise-color
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 12px
+        height: 12px
+        opacity: 0.5
+        vertical-align: middle
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center
+        &:hover
+            opacity: 1
+    &__arrow--left
+        background-image: url(../img/dist/sprite.svg#arrow-left-black)
+    &__arrow--right
+        background-image: url(../img/dist/sprite.svg#arrow-right-black)
+    &__link
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 16px
+        font-weight: 600
+        line-height: 16px
+        text-align: center
+    &__link--people
+        &:hover
+            color: $blue-color
+    &__link--park
+        &:hover
+            color: $salad-color
+    &__link--avenue
+        &:hover
+            color: $turquoise-color
+
+// MEDIA QUARIES
+@import "media"

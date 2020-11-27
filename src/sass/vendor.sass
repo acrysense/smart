@@ -1,0 +1,17 @@
+// FONTS LOAD SECTION
+@mixin font($fname, $fstyle, $fweight, $furl1, $furl2, $furl3)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		font-display: swap
+		src: local($fname), url($furl1) format('woff2'), url($furl2) format('woff'), url($furl3) format('embedded-opentype')
+
+@include font('Gilroy', normal, 300, '../fonts/Gilroy-Light.woff2', '../fonts/Gilroy-Light.woff', '../fonts/Gilroy-Light.eot')
+@include font('Gilroy', normal, 400, '../fonts/Gilroy-Regular.woff2', '../fonts/Gilroy-Regular.woff', '../fonts/Gilroy-Regular.eot')
+@include font('Gilroy', normal, 500, '../fonts/Gilroy-Medium.woff2', '../fonts/Gilroy-Medium.woff', '../fonts/Gilroy-Medium.eot')
+@include font('Gilroy', normal, 600, '../fonts/Gilroy-SemiBold.woff2', '../fonts/Gilroy-SemiBold.woff', '../fonts/Gilroy-SemiBold.eot')
+
+// IMPORT SECTION
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/swiper/swiper.scss' // Swiper
