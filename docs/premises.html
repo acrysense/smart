@@ -104,7 +104,65 @@
                                         <span class="btn--park">Задать вопрос</span>
                                     </a>
                                 </li>
+                                <button class="hamburger" id="hamburger-toggle">Меню</button>
                             </ul>
+                        </div>
+                        <div class="overlay">
+                            <div class="mobile-menu">
+                                <ul class="mobile-menu__list">
+                                    <li class="mobile-menu__item">
+                                        <a href="" class="mobile-menu__link mobile-menu__link--sub">Проекты</a>
+                                        <div class="submenu submenu--people">
+                                            <ul class="submenu__list">
+                                                <li class="submenu__item">
+                                                    <a href="" class="submenu__link">Smart People</a>
+                                                </li>
+                                                <li class="submenu__item">
+                                                    <a href="" class="submenu__link">Smart Avenue</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="" class="mobile-menu__link">Квартиры</a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="" class="mobile-menu__link">Паркинг</a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="" class="mobile-menu__link">Для бизнеса</a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="" class="mobile-menu__link">Концепция</a>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="" class="mobile-menu__link mobile-menu__link--sub">О компании</a>
+                                        <div class="submenu submenu--people">
+                                            <ul class="submenu__list">
+                                                <li class="submenu__item">
+                                                    <a href="" class="submenu__link">О компании</a>
+                                                </li>
+                                                <li class="submenu__item">
+                                                    <a href="" class="submenu__link">Официальные документы</a>
+                                                </li>
+                                                <li class="submenu__item">
+                                                    <a href="" class="submenu__link">Вакансии</a>
+                                                </li>
+                                                <li class="submenu__item">
+                                                    <a href="" class="submenu__link">Новости</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mobile-menu__item">
+                                        <a href="" class="mobile-menu__link">Контакты</a>
+                                    </li>
+                                </ul>
+                                <a href="tel:88000000000" class="mobile-menu__link--phone">8 800 000-00-00</a>
+                                <a href="" class="mobile-menu__link--cta">
+                                    <span class="btn--people">Записаться на экскурсию</span>
+                                </a>
+                            </div>
                         </div>
                         <nav class="breadcrumb" aria-label="Breadcrumb">
                             <ol class="breadcrumb__list">
@@ -122,7 +180,9 @@
                                 </li>
                             </ol>
                         </nav>
-                        <div class="title">Помещение 43,1 м2</div>
+                        <div class="head">
+                            <div class="head__title">Помещение 43,1 м2</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,9 +192,9 @@
     <!-- End of main -->
     <!-- Content -->
     <section class="content" id="content">
-        <div class="container-flex">
+        <div class="container-flex column-reverse">
             <div class="container-left">
-                <div class="promo">
+                <div class="promo promo--hidden">
                     <a href="" class="promo__item promo__item--flat promo__item--turquoise">
                         <span class="promo__title promo__title--flat">Безопасные сделки</span>
                         <span class="promo__description">Эскроу счета</span>
@@ -160,16 +220,28 @@
                                 <div class="flat__item flat__item--active-park">Планировка</div>
                                 <div class="flat__item">Этаж</div>
                             </div>
-                            <div class="flat__compass"></div>
+                            <div class="flat__compass flat__compass--park"></div>
                         </div>
                         <div class="flat__body">
                             <div class="flat__nav">
-                                <a href="" class="flat__arrow flat__arrow--up"></a>
-                                <div class="flat__counter">4</div>
-                                <a href="" class="flat__arrow flat__arrow--down"></a>
+                                <a href="" class="swiper-button-prev flat__arrow flat__arrow--up"></a>
+                                <div class="swiper-pagination flat__counter">4</div>
+                                <a href="" class="swiper-button-next flat__arrow flat__arrow--down"></a>
                             </div>
-                            <div class="flat__img">
-                                <img src="img/dist/flat.png" alt="">
+                            <div class="flat__slider">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="img/dist/flat.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="img/dist/flat.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="img/dist/flat.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -199,7 +271,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="section-heading">
+            </div>
+        </div>
+        <div class="container-flex">
+            <div class="container-left"></div>
+            <div class="container-right">
+                <div class="section-heading section-heading--top">
                     <h3 class="section-heading__title section-heading__title--normal">Похожие квартиры</h3>
                 </div>
                 <div class="apartments__wrapper">
@@ -298,23 +375,50 @@
     <!-- End of content -->
     <!-- Footer -->
     <footer class="footer" id="footer">
-        <div class="container-flex">
+        <div class="container-flex footer__mobile">
+            <div class="footer__contacts">
+                <a href="tel:88000000000" class="footer__phone">8 800 000-00-00</a>
+                <a href="" class="footer__back-call">Заказать обратный звонок</a>
+            </div>
+            <div class="social">
+                <ul class="social__list social__list--footer">
+                    <li class="social__item">
+                        <a href="" class="social__link social__link--instagram"></a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link social__link--vk"></a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link social__link--facebook"></a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link social__link--ok"></a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link social__link--youtube"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-flex footer__content">
             <div class="container-left">
                 <div class="footer__wrapper footer__wrapper--inner">
                     <a href="" class="footer__logo">
                         <img src="img/dist/logotype-footer.svg" alt="">
                     </a>
-                    <ul class="footer__list">
-                        <li class="footer__item">
-                            <a href="" class="footer__link footer__link--title">Проекты</a>
-                        </li>
-                        <li class="footer__item">
-                            <a href="" class="footer__link">Smart Park</a>
-                        </li>
-                        <li class="footer__item">
-                            <a href="" class="footer__link">Smart Avenue</a>
-                        </li>
-                    </ul>
+                    <div class="footer__inner">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="" class="footer__link footer__link--title">Проекты</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Smart Park</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Smart Avenue</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="container-right">
@@ -372,7 +476,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__inner">
+                    <div class="footer__inner footer__inner--hidden">
                         <div class="footer__contacts">
                             <a href="tel:88000000000" class="footer__phone">8 800 000-00-00</a>
                             <a href="" class="footer__back-call">Заказать обратный звонок</a>
@@ -403,24 +507,34 @@
         </div>
         <div class="container-flex footer__copyright">
             <div class="container-left">
-                <div class="footer__wrapper">
+                <div class="footer__wrapper footer__wrapper--copyfirst">
                     <a href="" class="footer__linkable">Правила пользовательского соглашения</a>
                 </div>
             </div>
             <div class="container-right">
-                <div class="footer__wrapper">
-                    <div class="footer__inner">
+                <div class="footer__wrapper footer__wrapper--copyright">
+                    <div class="footer__inner footer__inner--copyright">
                         <a href="" class="footer__linkable">Политика конфиденциальности</a>
                     </div>
-                    <div class="footer__inner">
+                    <div class="footer__inner footer__inner--copyright">
                         <a href="" class="footer__linkable">Проектные декларации</a>
                     </div>
-                    <div class="footer__inner">
+                    <div class="footer__inner footer__inner--copyright">
                         <p class="footer__author">
                             Разработка сайта - <a href="1gt.ru">1gt.ru</a>
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container-flex">
+            <div class="footer__inner footer__inner--separate">
+                <a href="" class="footer__linkable">Политика конфиденциальности</a>
+            </div>
+            <div class="footer__inner footer__inner--logotype">
+                <p class="footer__author">
+                    Разработка сайта - <a href="1gt.ru">1gt.ru</a>
+                </p>
             </div>
         </div>
     </footer>
